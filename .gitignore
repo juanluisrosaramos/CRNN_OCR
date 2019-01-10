@@ -1,6 +1,5 @@
 /tfRecords/**
 **/tfrecords_dir/
-/model/**
 /tboard/**
 **/__pycache__
 **/bounding_box/
