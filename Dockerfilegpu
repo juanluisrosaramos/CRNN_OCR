@@ -1,0 +1,21 @@
+FROM tensorflow/tensorflow:1.12.0-gpu-py3
+
+RUN apt update && \
+    apt install -y --no-install-recommends \
+        python3-tk \
+        vim \
+        ssh \
+        git && \
+    rm -rf /var/lib/apt/lists/*
+
+COPY requirementsgpu.txt requirements.txt
+RUN pip install -r requirements.txt
+
+RUN mkdir /app
+COPY /src/ /app
+COPY /model/ /app/model
+COPY /data /app/data
+WORKDIR /app
+
+RUN export PYTHONPATH=$PYTHONPATH:/app
+CMD ["/bin/bash"]

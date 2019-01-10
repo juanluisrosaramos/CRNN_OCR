@@ -121,8 +121,14 @@ class CRNN(CNNBaseModel):
     def build(self, inputdata):
         # first apply the cnn feature extraction stage
         cnn_out = self.__feature_sequence_extraction(inputdata=inputdata)
+        #print('cnn_out',cnn_out)
+
         # second apply the map to sequence stage
         sequence = self.__map_to_sequence(inputdata=cnn_out)
         # third apply the sequence label stage
+        #print('sqquence',sequence)
         net_out, raw_pred = self.__sequence_label(inputdata=sequence)
+        #print('net_out',net_out)
+        #print('raw_pred',raw_pred)
+
         return net_out

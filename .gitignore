@@ -5,3 +5,5 @@
 **/__pycache__
 **/bounding_box/
 *.tfrecords
+*.log
+filename.csv

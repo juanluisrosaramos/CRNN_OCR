@@ -115,6 +115,9 @@ class FeatureIO:
             number_lists[index[0], index[1]] = values[i]
         for number_list in number_lists:
             str_lists.append([self.int_to_char(val) for val in number_list])
+        i= 1
         for str_list in str_lists:
             res.append(''.join(c for c in str_list if c != '*'))
+            i = i +1
+
         return res
