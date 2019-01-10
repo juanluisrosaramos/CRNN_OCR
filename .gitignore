@@ -2,7 +2,6 @@
 **/tfrecords_dir/
 /tboard/**
 **/__pycache__
-**/bounding_box/
 *.tfrecords
 *.log
 filename.csv
