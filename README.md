@@ -194,9 +194,9 @@ Name_of_image,pred1,prob1,pred2,prob2,....,predN,probN
 
 Where pred is a prediction and prob the probability of that prediction
 
-COCO_train2014_000000042345.jpg,district,0.377022,pistrict,0.201334,districr,0.119883
+train2014_000000042345.jpg,district,0.377022,pistrict,0.201334,districr,0.119883
 
-COCO_train2014_000000448826.jpg,emirates,0.778889,enirates,0.042991,emiraies,0.041505,emnirates,0.037806,emiratos,0.031919
+train2014_000000448826.jpg,emirates,0.778889,enirates,0.042991,emiraies,0.041505,emnirates,0.037806,emiratos,0.031919
 
 
 # Details of the implementation
