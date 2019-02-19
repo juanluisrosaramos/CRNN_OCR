@@ -36,7 +36,8 @@ class CrnnTrainer:
 
         update_ops = tf.get_collection(tf.GraphKeys.UPDATE_OPS)
         with tf.control_dependencies(update_ops):
-            optimizer = tf.train.AdadeltaOptimizer(learning_rate=learning_rate).minimize(loss=cost, global_step=global_step)
+            #optimizer = tf.train.AdadeltaOptimizer(learning_rate=learning_rate).minimize(loss=cost, global_step=global_step)
+            optimizer = tf.train.RMSPropOptimizer(learning_rate=learning_rate).minimize(loss=cost, global_step=global_step)
         merge_summary_op = self._configure_tf_summary(cost, learning_rate, sequence_dist)
         self._saver = tf.train.Saver()
         sess = self._create_session()
@@ -75,8 +76,6 @@ class CrnnTrainer:
         sess_config = tf.ConfigProto()
         sess_config.gpu_options.per_process_gpu_memory_fraction = gpu_config.memory_fraction
         sess_config.gpu_options.allow_growth = gpu_config.is_tf_growth_allowed()
-        sess_config.gpu_options.allow_soft_placement=True
-        sess_config.gpu_options.log_device_placement=True
         return tf.Session(config=sess_config)
 
     def _build_data_feed(self, batch_size):

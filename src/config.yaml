@@ -1,6 +1,7 @@
 training:
   # Set the CRNN training epochs
   epochs: 40000
+  epochs: 40
   # Set the display step
   display_step: 1
   # Set the test display step during training process
