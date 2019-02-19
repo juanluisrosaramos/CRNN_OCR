@@ -74,9 +74,6 @@ Once we run the Docker image we can execute the prediction running a python3 scr
 ### Testing the script
 
 
-<p id="gdcalert1" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: Definition &darr;&darr; outside of definition list. Missing preceding term(s)? </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert2">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
 :/app# python demo_batch.py
 
 And the script runs over the images in /data/test_images folder and must return
@@ -93,10 +90,6 @@ Predictions saved in file data/output.csv
 
 Another test can be done:
 
-
-<p id="gdcalert2" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: Definition &darr;&darr; outside of definition list. Missing preceding term(s)? </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert3">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
 :/app# python demo_batch.py -i data/bounding_box/
 
 It will run the code against 3423 COCO text images.
@@ -110,10 +103,6 @@ Predicting 3423 images in chuncks of 32
 Prediction time for 32 images: 1.7391960620880127
 
 Prediction time for 32 images: 1.6067194938659668
-
-…
-
-…
 
 Total prediction time: 184.91092610359192
 
@@ -194,9 +183,9 @@ Name_of_image,pred1,prob1,pred2,prob2,....,predN,probN
 
 Where pred is a prediction and prob the probability of that prediction
 
-COCO_train2014_000000042345.jpg,district,0.377022,pistrict,0.201334,districr,0.119883
+train2014_000000042345.jpg,district,0.377022,pistrict,0.201334,districr,0.119883
 
-COCO_train2014_000000448826.jpg,emirates,0.778889,enirates,0.042991,emiraies,0.041505,emnirates,0.037806,emiratos,0.031919
+train2014_000000448826.jpg,emirates,0.778889,enirates,0.042991,emiraies,0.041505,emnirates,0.037806,emiratos,0.031919
 
 
 # Details of the implementation
