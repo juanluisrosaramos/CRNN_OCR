@@ -26,7 +26,7 @@ test:
 
 gpu:
   # Set the GPU resource used during training process
-  memory_fraction: 0.85
+  memory_fraction: 0.95
   # Set the GPU allow growth parameter during tensorflow training process
   tf_allow_growth: True
 

@@ -75,6 +75,8 @@ class CrnnTrainer:
         sess_config = tf.ConfigProto()
         sess_config.gpu_options.per_process_gpu_memory_fraction = gpu_config.memory_fraction
         sess_config.gpu_options.allow_growth = gpu_config.is_tf_growth_allowed()
+        sess_config.gpu_options.allow_soft_placement=True
+        sess_config.gpu_options.log_device_placement=True
         return tf.Session(config=sess_config)
 
     def _build_data_feed(self, batch_size):

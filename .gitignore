@@ -5,3 +5,10 @@
 *.tfrecords
 *.log
 filename.csv
+data/bounding_box/**
+o*.csv
+model/**
+model/checkpoint
+model/crnn_dsc_2018-08-20.ckpt.meta
+model/crnn_dsc_2018-08-20.ckpt.data-00000-of-00001
+model/crnn_dsc_2018-08-20.ckpt.index

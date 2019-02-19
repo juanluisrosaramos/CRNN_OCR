@@ -63,7 +63,7 @@ def recognize(image_path: str, weights_path: str, output_file: str, files_limit=
             images = np.squeeze(images)
             padded_images = np.zeros([BATCH_SIZE, 32, 100, 3])
             padded_images[:images.shape[0], :, :, :] = images
-                
+
             predictions,probs = sess.run([decoded,log_probabilities], feed_dict={inputdata: padded_images})
             for i, fname in enumerate(filenames):
                 result = ''
