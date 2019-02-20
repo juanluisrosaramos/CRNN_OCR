@@ -39,7 +39,7 @@ class CrnnTrainer:
             #optimizer = tf.train.AdadeltaOptimizer(learning_rate=learning_rate).minimize(loss=cost, global_step=global_step)
             optimizer = tf.train.RMSPropOptimizer(learning_rate=learning_rate).minimize(loss=cost, global_step=global_step)
         merge_summary_op = self._configure_tf_summary(cost, learning_rate, sequence_dist)
-        self._saver = tf.train.Saver()
+        self._saver = tf.train.Saver(max_to_keep=20)
         sess = self._create_session()
         summary_writer = tf.summary.FileWriter(self._tboard_save_path)
         summary_writer.add_graph(sess.graph)
